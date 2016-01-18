@@ -1,0 +1,2 @@
+# docker-hive
+Dockerize Hive
