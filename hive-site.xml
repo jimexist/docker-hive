@@ -1,0 +1,13 @@
+<configuration>
+  <!-- this is a default setup for hive-site, but in reality you should use
+  ansible to override this as well as the config files of hadoop with actual
+  hostnames and ports -->
+  <property>
+    <name>javax.jdo.option.ConnectionDriverName</name>
+    <value>org.postgresql.Driver</value>
+  </property>
+  <property>
+    <name>javax.jdo.option.ConnectionUserName</name>
+    <value>hive</value>
+  </property>
+</configuration>
