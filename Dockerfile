@@ -5,7 +5,7 @@ MAINTAINER Jiayu Liu <etareduce@gmail.com>
 # choose a closer mirror
 ADD http://mirrors.cnnic.cn/apache/hive/hive-1.2.1/apache-hive-1.2.1-bin.tar.gz /tmp/apache-hive-1.2.1-bin.tar.gz
 RUN mkdir -p /usr/local/hive && \
-    tar -xvf /tmp/apache-hive-1.2.1-bin.tar.gz -C /user/local/hive --strip-components=1 && \
+    tar -xvf /tmp/apache-hive-1.2.1-bin.tar.gz -C /usr/local/hive --strip-components=1 && \
     rm /tmp/apache-hive-1.2.1-bin.tar.gz
 
 ENV HIVE_HOME /usr/local/hive
