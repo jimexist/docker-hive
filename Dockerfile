@@ -9,10 +9,10 @@ RUN mkdir -p /usr/local/hive && \
     rm /tmp/apache-hive-1.2.1-bin.tar.gz
 
 ENV HIVE_HOME /usr/local/hive
-ENV HIVE_CONF $HOME_HOME/conf
+ENV HIVE_CONF $HIVE_HOME/conf
 ENV PATH $HIVE_HOME/bin:$PATH
 
-ADD hive-site.xml $HIVE_CONF/hite-site.xml
+ADD hive-site.xml $HIVE_CONF/hive-site.xml
 
 WORKDIR $HIVE_HOME
 
