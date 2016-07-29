@@ -1,10 +1,14 @@
 #!/bin/bash
 /bin/bash /etc/bootstrap.sh
+
+echo "leaving namenode safemode..."
+$HADOOP_PREFIX/bin/hdfs dfsadmin -safemode leave
+
+echo "making directory for Hive metastore"
 $HADOOP_PREFIX/bin/hadoop fs -mkdir -p /user/hive/warehouse
 
-# start hive metastore
 echo "starting metastore"
 ./bin/hive --service metastore &
-# start hiveserver
+
 echo "starting hive server2"
 ./bin/hiveserver2
