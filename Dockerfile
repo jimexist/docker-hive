@@ -13,6 +13,9 @@ ENV HIVE_CONF $HIVE_HOME/conf
 ENV HIVE_LIB $HIVE_HOME/lib
 ENV PATH $HIVE_HOME/bin:$PATH
 
+# override the core-site
+ADD core-site.xml /usr/local/hadoop/etc/hadoop/core-site.xml
+
 # add the jdbc driver for metastore
 ADD https://jdbc.postgresql.org/download/postgresql-9.4.1209.jre7.jar $HIVE_LIB/postgresql-9.4.1209.jre7.jar
 ADD hive-site.xml $HIVE_CONF/hive-site.xml
@@ -20,6 +23,6 @@ ADD entrypoint.sh $HIVE_HOME/entrypoint.sh
 
 WORKDIR $HIVE_HOME
 
-EXPOSE 10000 9083
+EXPOSE 10000 9083 9000
 
 ENTRYPOINT "./entrypoint.sh"
