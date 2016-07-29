@@ -1,5 +1,9 @@
 <configuration>
   <property>
+    <name>hive.metastore.cache.pinobjtypes</name>
+    <value>Table,Database,Type,FieldSchema,Order</value>
+  </property>
+  <property>
     <name>javax.jdo.option.ConnectionDriverName</name>
     <value>org.postgresql.Driver</value>
   </property>
@@ -10,6 +14,10 @@
   <property>
     <name>javax.jdo.option.ConnectionPassword</name>
     <value></value>
+  </property>
+  <property>
+    <name>hive.metastore.warehouse.dir</name>
+    <value>/user/hive/warehouse</value>
   </property>
   <property>
     <name>javax.jdo.option.ConnectionURL</name>
