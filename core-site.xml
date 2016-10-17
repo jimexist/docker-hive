@@ -4,11 +4,11 @@
         <value>hdfs://hive:9000</value>
     </property>
     <property>
-        <name>hadoop.proxyuser.mapr.groups</name>
+        <name>hadoop.proxyuser.super.groups</name>
         <value>*</value>
-   </property>
-   <property>
-        <name>hadoop.proxyuser.mapr.hosts</name>
+    </property>
+    <property>
+        <name>hadoop.proxyuser.super.hosts</name>
         <value>*</value>
-   </property>
+    </property>
 </configuration>
