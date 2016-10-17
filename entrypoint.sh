@@ -7,6 +7,9 @@ $HADOOP_PREFIX/bin/hdfs dfsadmin -safemode leave
 echo "making directory for Hive metastore"
 $HADOOP_PREFIX/bin/hadoop fs -mkdir -p /user/hive/warehouse
 
+echo "initializing metastore"
+./bin/schematool -dbType postgres -initSchema
+
 echo "starting metastore"
 ./bin/hive --service metastore &
 
