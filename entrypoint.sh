@@ -14,4 +14,4 @@ echo "starting metastore"
 ./bin/hive --service metastore &
 
 echo "starting hive server2"
-./bin/hiveserver2
+exec ./bin/hiveserver2
