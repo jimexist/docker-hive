@@ -5,7 +5,7 @@
   </property>
   <property>
     <name>javax.jdo.option.ConnectionDriverName</name>
-    <value>org.postgresql.Driver</value>
+    <value>com.mysql.jdbc.Driver</value>
   </property>
   <property>
     <name>javax.jdo.option.ConnectionUserName</name>
@@ -13,7 +13,7 @@
   </property>
   <property>
     <name>javax.jdo.option.ConnectionPassword</name>
-    <value></value>
+    <value>madadata</value>
   </property>
   <property>
     <name>hive.metastore.warehouse.dir</name>
@@ -21,7 +21,7 @@
   </property>
   <property>
     <name>javax.jdo.option.ConnectionURL</name>
-    <value>jdbc:postgresql://postgresql/circle_test?createDatabaseIfNotExist=true</value>
+    <value>jdbc:mysql://mysql/circle_test?createDatabaseIfNotExist=true&amp;useSSL=false</value>
   </property>
   <property>
     <name>datanucleus.autoStartMechanism</name>
