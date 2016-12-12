@@ -3,12 +3,12 @@ FROM sequenceiq/hadoop-docker:2.7.1
 MAINTAINER Jiayu Liu <etareduce@gmail.com>
 
 # choose a closer mirror
-# ADD https://mirrors.tuna.tsinghua.edu.cn/apache/hive/hive-2.1.0/apache-hive-2.1.0-bin.tar.gz /tmp/apache-hive-2.1.0-bin.tar.gz
-ADD https://mirrors.ocf.berkeley.edu/apache/hive/hive-2.1.0/apache-hive-2.1.0-bin.tar.gz /tmp/apache-hive-2.1.0-bin.tar.gz
+# ADD https://mirrors.tuna.tsinghua.edu.cn/apache/hive/hive-2.1.1/apache-hive-2.1.1-bin.tar.gz /tmp/apache-hive-2.1.1-bin.tar.gz
+ADD https://mirrors.ocf.berkeley.edu/apache/hive/hive-2.1.1/apache-hive-2.1.1-bin.tar.gz /tmp/apache-hive-2.1.1-bin.tar.gz
 
 RUN mkdir -p /usr/local/hive && \
-    tar -xvf /tmp/apache-hive-2.1.0-bin.tar.gz -C /usr/local/hive --strip-components=1 && \
-    rm /tmp/apache-hive-2.1.0-bin.tar.gz
+    tar -xvf /tmp/apache-hive-2.1.1-bin.tar.gz -C /usr/local/hive --strip-components=1 && \
+    rm /tmp/apache-hive-2.1.1-bin.tar.gz
 
 ENV HIVE_HOME /usr/local/hive
 ENV HIVE_CONF $HIVE_HOME/conf
