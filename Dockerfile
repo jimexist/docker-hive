@@ -3,7 +3,7 @@ FROM sequenceiq/hadoop-docker:2.7.1
 MAINTAINER Jiayu Liu <etareduce@gmail.com>
 
 # choose a closer mirror
-# ADD https://mirrors.ocf.berkeley.edu/apache/hive/hive-2.1.1/apache-hive-2.1.1-bin.tar.gz
+# ADD https://mirrors.tuna.tsinghua.edu.cn/apache/hive/hive-2.1.1/apache-hive-2.1.1-bin.tar.gz /tmp/apache-hive-2.1.1-bin.tar.gz
 ADD https://mirrors.ocf.berkeley.edu/apache/hive/hive-2.1.1/apache-hive-2.1.1-bin.tar.gz /tmp/apache-hive-2.1.1-bin.tar.gz
 
 RUN mkdir -p /usr/local/hive && \
