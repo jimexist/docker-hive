@@ -8,7 +8,7 @@ echo "making directory for Hive metastore"
 $HADOOP_PREFIX/bin/hadoop fs -mkdir -p /user/hive/warehouse
 
 echo "initializing metastore"
-./bin/schematool -dbType postgres -initSchema
+./bin/schematool -dbType mysql -initSchema
 
 echo "starting metastore"
 ./bin/hive --service metastore &
