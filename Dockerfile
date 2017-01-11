@@ -15,7 +15,7 @@ ENV HIVE_CONF $HIVE_HOME/conf \
     HADOOP_YARN_HOME=$HADOOP_HOME/share/hadoop/yarn
 
 RUN mkdir -p $HIVE_HOME \
-    && curl -o /tmp/apache-hive-$HIVE_VERSION-bin.tar.gz https://mirrors.tuna.tsinghua.edu.cn/apache/hive/hive-$HIVE_VERSION/apache-hive-$HIVE_VERSION-bin.tar.gz \
+    && curl -Lo /tmp/apache-hive-$HIVE_VERSION-bin.tar.gz https://mirrors.tuna.tsinghua.edu.cn/apache/hive/hive-$HIVE_VERSION/apache-hive-$HIVE_VERSION-bin.tar.gz \
     && tar -xvf /tmp/apache-hive-$HIVE_VERSION-bin.tar.gz -C $HIVE_HOME --strip-components=1 \
     && rm /tmp/apache-hive-$HIVE_VERSION-bin.tar.gz \
     && curl -Lo /tmp/mysql-connector-java-$MYSQL_VERSION.tar.gz https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-$MYSQL_VERSION.tar.gz \
