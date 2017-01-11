@@ -1,5 +1,7 @@
 #!/bin/bash
-/bin/bash /etc/bootstrap.sh
+set -euf -o pipefail
+
+. /etc/bootstrap.sh
 
 echo "leaving namenode safemode..."
 $HADOOP_PREFIX/bin/hdfs dfsadmin -safemode leave

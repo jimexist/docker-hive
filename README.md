@@ -1,5 +1,8 @@
 # Docker Hive
 
+[![Build Status](https://travis-ci.org/Jimexist/docker-hive.svg?branch=master)](https://travis-ci.org/Jimexist/docker-hive)
+[![Docker Pulls](https://img.shields.io/docker/pulls/jimexist/docker-hive.svg)](https://hub.docker.com/r/jimexist/docker-hive/)
+
 Dockerize Hive
 
 ```sh
